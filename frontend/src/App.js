@@ -1,11 +1,20 @@
-
-
+import {BrowserRouter,Route,Routes} from "react-router-dom"
+import Allbooks from "./Pages/Allbooks";
+import Add from "./Pages/Add";
+import Update from "./Pages/Update";
 function App() {
   return (
     <div className="App">
-      CRUD
+     <BrowserRouter>
+     <Routes>
+      <Route path="/allbooks" element={<Allbooks/>}/>
+      <Route path="/add" element={<Add/>}/>
+      <Route path="/update" element={<Update/>}/>
+     </Routes>
+     </BrowserRouter>
     </div>
   );
 }
+
 
 export default App;
