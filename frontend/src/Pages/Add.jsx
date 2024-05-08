@@ -29,11 +29,12 @@ const Add = () => {
   return (
     <>
     <form>
+    <h2>Add a Book</h2>
     <input type='text' name="desc" placeholder='Enter the desc' onChange={handlechange}></input>
     <input type='text' name="title" placeholder='Enter the title' onChange={handlechange}></input>
     <input type='text' name="cover" placeholder='Enter the url of image' onChange={handlechange}></input>
     <input type='number' name='price' placeholder='Enter the price'onChange={handlechange}></input>
-    <button onClick={addbook}>Add</button>
+    <button className='addbook-button' onClick={addbook}>Add</button>
     </form>
     </>
   )

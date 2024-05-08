@@ -19,19 +19,24 @@ const Allbooks = () => {
   // }
   return (
     <>
-    <h4>All Books</h4>
+    <div className='Allbooks'>
+    <h2>All Books</h2>
     <div className='books'>
       {books.map(book=>(
         <div className='book' id={book.id}>
-        {book.cover && <img src={book.cover} alt=""></img>}
+       <div id='cover-image-div'>
+       {book.cover && <img src={book.cover} className='cover-image' alt=""></img>}
+       </div>
         <h4>{book.title}</h4>
          <div>{book.Desc}</div>
-         <div>{book.price}</div>
-        
+         <div>`$ {book.price}`</div>
+        <button id="delete-book-button" className='addbook-button'>Delete</button>
+        <button id="update-book-button" className='addbook-button'> Update</button>
          </div>
       ))}
     </div>
-    <button onClick="addbook">Add Book</button>
+    <button className="addbook-button" onClick="addbook">Add Book</button>
+    </div>
     </>
    
   )
